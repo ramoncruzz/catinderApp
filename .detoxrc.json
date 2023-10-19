@@ -1,0 +1,22 @@
+{
+  "testRunner": "jest",
+  "runnerConfig": "e2e/config.json",
+  "configurations": {
+    "android.e2e.debug": {
+      "type": "android.emulator",
+      "binaryPath": "android/app/build/outputs/apk/debug/app-debug.apk",
+      "build": "cd android && ENVFILE=.env && ./gradlew assembleRelease assembleAndroidTest -DtestBuildType=debug && cd ..",
+      "device": {
+        "avdName": "android"
+      }
+    },"ios.e2e.debug": {
+      "name": "card",
+      "type": "ios.simulator",
+      "device": {
+        "type": "iPhone 11"
+      },
+      "binaryPath": "ios/build/Build/Products/Debug-iphonesimulator/Catinder.app",
+      "build": "xcodebuild -workspace ios/Catinder.xcworkspace -scheme Catinder -configuration Debug -sdk iphonesimulator -derivedDataPath ios/build"
+    }
+  }
+}
