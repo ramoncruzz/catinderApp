@@ -12,8 +12,8 @@ module.exports = {
   apps: {
     'ios.e2e.debug': {
       type: 'ios.app',
-      binaryPath: 'ios/build/Build/Products/Debug-iphonesimulator/Catinder.app',
-      build: 'xcodebuild -workspace ios/Catinder.xcworkspace -scheme Catinder -configuration Debug -sdk iphonesimulator -derivedDataPath ios/build'
+      binaryPath: 'ios/build/Build/Products/Debug-iphonesimulator/catinder.app',
+      build: 'xcodebuild -workspace ios/catinder.xcworkspace -scheme catinder -configuration Debug -sdk iphonesimulator -derivedDataPath ios/build'
     },
     'android.e2e.debug': {
       type: 'android.emulator',
@@ -48,9 +48,11 @@ module.exports = {
     }
   },
   configurations: {
-    'ios.sim.debug': {
-      device: 'simulator',
-      app: 'ios.debug'
+    'ios.e2e.debug': {
+      device: {
+        type: 'ios.simulator'
+      },
+      "app": "ios.e2e.debug"
     },
     'ios.sim.release': {
       device: 'simulator',

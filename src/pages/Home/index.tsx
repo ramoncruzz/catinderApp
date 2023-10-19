@@ -18,7 +18,7 @@ const Home: React.FC = (): JSX.Element => {
             console.log(`match ${index}`);
           }}
           onNotMatch={index => {
-            console.log(`note match ${index}`);
+            console.log(`not match ${index}`);
           }}
           cats={catList}
           testID={trackComponent(namePageForTesting, 'StackCardSwiper')}
