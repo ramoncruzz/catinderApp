@@ -13,6 +13,7 @@ const RootStack = () => (
       headerShown: false,
       tabBarStyle: {backgroundColor: 'green'},
     }}
+    sceneContainerStyle={{paddingBottom: 100, backgroundColor: '#E5E5E5'}}
     tabBar={props => <BottonBar {...props} />}>
     <Tab.Screen name="Home" component={Home} />
     <Tab.Screen name="Chat" component={Chat} />
