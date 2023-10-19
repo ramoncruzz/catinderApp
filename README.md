@@ -1,7 +1,5 @@
 # caTinder
 
-## Branch: _After time_
-
 caTinder App is a simple project that helps to understand important concepts on an React Native Project. Here you'll see How to:
 
 - Implement a custom bottom bar using React Navigation;
